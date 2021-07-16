@@ -14,6 +14,7 @@ See more information in: https://github.com/FabricioEntringerMoreira/exchange-ra
 
 - [Built With](#built-with)
 - [Source Code](#source-code)
+- [Install and Execute](#install-and-execute)
 - [Usage](#usage)
     
 
@@ -42,7 +43,7 @@ To implement the solution were used the below frameworks and tools were:
 ## Install and Execute
 
     ```sh
-        npm install
+    npm install
     ```
     
 
