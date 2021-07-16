@@ -42,9 +42,9 @@ To implement the solution were used the below frameworks and tools were:
 
 ## Install and Execute
 
-    ```sh
+   ```sh
     npm install
-    ```
+   ```
     
 
 ## Usage
