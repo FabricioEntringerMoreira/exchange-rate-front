@@ -1,0 +1,70 @@
+
+
+
+<div class="container">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">
+
+          <div class="form-group">
+              <label>Value:</label>
+              <input type="text" class="form-control" #valorDoUser required>
+          </div>
+          <p></p>
+          <div class="col-md-3">
+              <label for="estado" class="control-label">Currency:</label>
+              <select class="form-control" id="currency" formControlName="formCurrency" #cotacao required>
+                  <option *ngFor="let currency of currencies" [value]="currency.code">{{currency.code}}</option>
+              </select>
+          </div>
+          <p></p>
+          <button type="button" class="btn btn-primary" (click)="calculate(cotacao.value, valorDoUser.value)">Calculate</button>
+    </th>
+    <th scope="col">
+
+        <div class="alert alert-success" role="alert">
+            Base currency: <strong>{{originCurrency}}</strong> <br>
+            Original value: <strong>{{originalValue}}</strong><br>
+            Target currency: <strong>{{targetCurrency}}</strong><br>
+            Exchange rate: <strong>{{exchangeRate}}</strong><br><br>
+            Final value: <strong>{{finalValue}}</strong><br>
+        </div> 
+      </th>  
+      </tr>
+    </thead>
+  </table>
+</div>
+
+<div class="container">
+  <div class="card list-exchanges">
+    <h5 class="card-header">List of Exchanges Executed </h5>
+    <div class="card-body">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Origin Currency</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Target Currency</th>
+              <th scope="col">Rate</th>
+              <th scope="col">Value </th>
+              <th scope="col">Rate Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let exchange of exchanges">
+              <td>{{exchange.id}}</td>
+              <td>{{exchange.originCurrency}}</td>
+              <td>{{exchange.amount | currency:'EUR'}}</td>
+              <td>{{exchange.targetCurrency}}</td>
+              <td>{{exchange.rate}}</td>
+              <td>{{exchange.value | currency:exchange.targetCurrency}}</td>
+              <td>{{exchange.dataTimeRate | date:'dd/MM/yyyy hh:mm:ss a':'+0400'}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+
