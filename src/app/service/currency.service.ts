@@ -12,13 +12,13 @@ export class CurrencyService {
 
   // To local test, change here:
   
-  url_find_all_currency = 'https://exchange-rate-backend.herokuapp.com/currencies'
-  url_find_all_exchanges_executed = 'https://exchange-rate-backend.herokuapp.com/exchanges'
-  url_execute_exchange = 'https://exchange-rate-backend.herokuapp.com/currencies'
+  //url_find_all_currency = 'https://exchange-rate-backend.herokuapp.com/currencies'
+  //url_find_all_exchanges_executed = 'https://exchange-rate-backend.herokuapp.com/exchanges'
+  //url_execute_exchange = 'https://exchange-rate-backend.herokuapp.com/currencies'
   
-  //url_find_all_currency = 'http://localhost:8081/currencies'
-  //url_find_all_exchanges_executed = 'http://localhost:8081/exchanges'
-  //url_execute_exchange = 'http://localhost:8081/currencies'
+  url_find_all_currency = 'http://localhost:8081/currencies'
+  url_find_all_exchanges_executed = 'http://localhost:8081/exchanges'
+  url_execute_exchange = 'http://localhost:8081/currencies'
 
   // HttpClient injection
   constructor(private httpClient: HttpClient) { }
